@@ -316,7 +316,7 @@
         </ul>
       </div>
     </div>
-    <form class="form reveal" action="/api/contact" method="post" novalidate data-form>
+    <form class="form reveal" action="https://formspree.io/f/moejpeoo" method="POST" novalidate data-form>
       <div class="form-summary" role="alert" tabindex="-1" hidden data-summary></div>
       <div class="field-row">
         <div class="field"><label for="f-name">Ime i prezime <abbr title="Obavezno">*</abbr></label><input id="f-name" name="name" type="text" autocomplete="name" required maxlength="120" aria-describedby="e-name"><p class="err" id="e-name" data-for="name"></p></div>
@@ -332,11 +332,11 @@
       </div>
       <div class="field"><label for="f-description">Kratak opis vašeg poslovanja <abbr title="Obavezno">*</abbr></label><textarea id="f-description" name="description" rows="5" required minlength="20" maxlength="3000" placeholder="Što nudite, kome i gdje?" aria-describedby="e-description"></textarea><p class="err" id="e-description" data-for="description"></p></div>
       <div class="field"><label for="f-url">Postojeća web stranica <span class="opt">(neobavezno)</span></label><input id="f-url" name="url" type="url" inputmode="url" maxlength="300" placeholder="https://" aria-describedby="e-url"><p class="err" id="e-url" data-for="url"></p></div>
-      <div class="hp" aria-hidden="true"><label for="f-website2">Website</label><input id="f-website2" name="website2" type="text" tabindex="-1" autocomplete="off"></div>
+      <div class="hp" aria-hidden="true"><label for="f-gotcha">Website</label><input id="f-gotcha" name="_gotcha" type="text" tabindex="-1" autocomplete="off"></div>
       <input type="hidden" name="locale" value="hr">
-      <input type="hidden" name="ts" value="" data-ts>
+      <input type="hidden" name="_subject" value="Website-Anfrage (HR) – klarseitestudio.online">
       <p class="privacy-text">Vaše podatke koristimo isključivo za obradu upita i pripremu moguće narudžbe (čl. 6. st. 1. t. (b) GDPR-a). Ne prosljeđujemo ih u marketinške svrhe. Pojedinosti u našim <a href="/hr/privatnost/">pravilima privatnosti</a>.</p>
-      <div class="field field-check"><input id="f-consent" name="consent" type="checkbox" required aria-describedby="e-consent"><label for="f-consent">Upoznat/a sam s <a href="/hr/privatnost/">obavijesti o zaštiti podataka</a>.</label><p class="err" id="e-consent" data-for="consent"></p></div>
+      <div class="field field-check"><input id="f-consent" name="consent" type="checkbox" value="ja / yes / da" required aria-describedby="e-consent"><label for="f-consent">Upoznat/a sam s <a href="/hr/privatnost/">obavijesti o zaštiti podataka</a>.</label><p class="err" id="e-consent" data-for="consent"></p></div>
       <button class="btn btn-primary btn-lg btn-block" type="submit" data-submit><span data-submit-label>Pošalji upit</span><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></button>
       <div class="form-status" role="status" aria-live="polite" data-status></div>
     </form>

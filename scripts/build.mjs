@@ -426,7 +426,7 @@ ${header(t)}
         </ul>
       </div>
     </div>
-    <form class="form reveal" action="/api/contact" method="post" novalidate data-form>
+    <form class="form reveal" action="${SITE.formspree}" method="POST" novalidate data-form>
       <div class="form-summary" role="alert" tabindex="-1" hidden data-summary></div>
       <div class="field-row">
         <div class="field"><label for="f-name">${esc(f.name)} <abbr title="${esc(f.required)}">*</abbr></label><input id="f-name" name="name" type="text" autocomplete="name" required maxlength="120" aria-describedby="e-name"><p class="err" id="e-name" data-for="name"></p></div>
@@ -442,11 +442,11 @@ ${header(t)}
       </div>
       <div class="field"><label for="f-description">${esc(f.description)} <abbr title="${esc(f.required)}">*</abbr></label><textarea id="f-description" name="description" rows="5" required minlength="20" maxlength="3000" placeholder="${esc(f.descriptionPh)}" aria-describedby="e-description"></textarea><p class="err" id="e-description" data-for="description"></p></div>
       <div class="field"><label for="f-url">${esc(f.url)} <span class="opt">(${esc(f.optional)})</span></label><input id="f-url" name="url" type="url" inputmode="url" maxlength="300" placeholder="${esc(f.urlPh)}" aria-describedby="e-url"><p class="err" id="e-url" data-for="url"></p></div>
-      <div class="hp" aria-hidden="true"><label for="f-website2">Website</label><input id="f-website2" name="website2" type="text" tabindex="-1" autocomplete="off"></div>
+      <div class="hp" aria-hidden="true"><label for="f-gotcha">Website</label><input id="f-gotcha" name="_gotcha" type="text" tabindex="-1" autocomplete="off"></div>
       <input type="hidden" name="locale" value="${t.code}">
-      <input type="hidden" name="ts" value="" data-ts>
+      <input type="hidden" name="_subject" value="Website-Anfrage (${t.label}) – klarseitestudio.online">
       <p class="privacy-text">${c.privacy.replaceAll('{privacy}', priv)}</p>
-      <div class="field field-check"><input id="f-consent" name="consent" type="checkbox" required aria-describedby="e-consent"><label for="f-consent">${f.consent.replaceAll('{privacy}', priv)}</label><p class="err" id="e-consent" data-for="consent"></p></div>
+      <div class="field field-check"><input id="f-consent" name="consent" type="checkbox" value="ja / yes / da" required aria-describedby="e-consent"><label for="f-consent">${f.consent.replaceAll('{privacy}', priv)}</label><p class="err" id="e-consent" data-for="consent"></p></div>
       <button class="btn btn-primary btn-lg btn-block" type="submit" data-submit><span data-submit-label>${esc(f.submit)}</span>${icon('arrow')}</button>
       <div class="form-status" role="status" aria-live="polite" data-status></div>
     </form>
@@ -504,6 +504,6 @@ out('sitemap.xml', `<?xml version="1.0" encoding="UTF-8"?>
 ${entry(LANGS.map((l) => ({ code: l.code, path: url(l.code) })))}
 </urlset>
 `);
-out('robots.txt', `User-agent: *\nAllow: /\nDisallow: /api/\n\nSitemap: ${SITE.domain}/sitemap.xml\n`);
+out('robots.txt', `User-agent: *\nAllow: /\nSitemap: ${SITE.domain}/sitemap.xml\n`);
 
 console.log('Built:', LANGS.map((l) => l.code).join(', '));

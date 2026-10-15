@@ -7,6 +7,7 @@ export const SITE = {
   phoneDisplay: '+385 91 900 2057',
   phoneHref: '+385919002057',
   whatsapp: '385919002057', // international format, digits only
+  formspree: 'https://formspree.io/f/moejpeoo', // contact form endpoint
   year: new Date().getFullYear(),
 };
 
@@ -215,7 +216,7 @@ const de = {
     privacy: [
       ['1. Verantwortlicher', '<p>[Name, Anschrift]<br>E-Mail: <a href="mailto:{email}">{email}</a><br>Telefon: {phone}</p>'],
       ['2. Hosting', '<p>Diese Website wird bei Vercel Inc. gehostet. Beim Aufruf werden technisch notwendige Server-Logdaten (z. B. IP-Adresse, Zeitpunkt, aufgerufene Seite) verarbeitet. Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO. [Angaben zum Auftragsverarbeitungsvertrag und zur Drittlandübermittlung ergänzen.]</p>'],
-      ['3. Kontaktformular', '<p>Die im Formular angegebenen Daten verarbeiten wir zur Bearbeitung Ihrer Anfrage und zur Vorbereitung eines Vertrags (Art. 6 Abs. 1 lit. b DSGVO). Der Versand erfolgt über den E-Mail-Dienst [Anbieter, z. B. Resend]. [Speicherdauer und Löschfristen ergänzen.]</p>'],
+      ['3. Kontaktformular', '<p>Die im Formular angegebenen Daten verarbeiten wir zur Bearbeitung Ihrer Anfrage und zur Vorbereitung eines Vertrags (Art. 6 Abs. 1 lit. b DSGVO). Die Übermittlung erfolgt über den Formulardienst Formspree (Formspree, Inc., USA), der uns die Anfrage per E-Mail zustellt. [Angaben zum Auftragsverarbeitungsvertrag, zur Drittlandübermittlung sowie Speicherdauer und Löschfristen ergänzen.]</p>'],
       ['4. WhatsApp', '<p>Wenn Sie uns über WhatsApp kontaktieren, werden Ihre Daten durch WhatsApp Ireland Ltd. verarbeitet. Bitte beachten Sie die Datenschutzhinweise von WhatsApp. Die Nutzung ist freiwillig; alternativ erreichen Sie uns per E-Mail.</p>'],
       ['5. Cookies und Schriftarten', '<p>Wir setzen keine Tracking-Cookies und keine Analyse-Dienste ein. Schriftarten werden lokal von unserem Server geladen.</p>'],
       ['6. Ihre Rechte', '<p>Sie haben das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit und Widerspruch sowie das Recht auf Beschwerde bei einer Datenschutz-Aufsichtsbehörde.</p>'],
@@ -428,7 +429,7 @@ const en = {
     privacy: [
       ['1. Controller', '<p>[Name, address]<br>Email: <a href="mailto:{email}">{email}</a><br>Phone: {phone}</p>'],
       ['2. Hosting', '<p>This website is hosted by Vercel Inc. When you visit it, technically necessary server log data (e.g. IP address, time, page requested) is processed. Legal basis: Art. 6(1)(f) GDPR. [Add details of the data processing agreement and third-country transfers.]</p>'],
-      ['3. Contact form', '<p>We process the data entered in the form to handle your request and to prepare a contract (Art. 6(1)(b) GDPR). Messages are sent via the email service [provider, e.g. Resend]. [Add retention periods.]</p>'],
+      ['3. Contact form', '<p>We process the data entered in the form to handle your request and to prepare a contract (Art. 6(1)(b) GDPR). Submissions are transmitted via the form service Formspree (Formspree, Inc., USA), which forwards them to us by email. [Add details of the data processing agreement, third-country transfers and retention periods.]</p>'],
       ['4. WhatsApp', '<p>If you contact us via WhatsApp, your data is processed by WhatsApp Ireland Ltd. Please refer to WhatsApp’s privacy policy. Using WhatsApp is optional; you can also reach us by email.</p>'],
       ['5. Cookies and fonts', '<p>We use no tracking cookies and no analytics services. Fonts are loaded locally from our own server.</p>'],
       ['6. Your rights', '<p>You have the right to access, rectification, erasure, restriction of processing, data portability and objection, and the right to lodge a complaint with a data protection supervisory authority.</p>'],
@@ -641,7 +642,7 @@ const hr = {
     privacy: [
       ['1. Voditelj obrade', '<p>[Ime, adresa]<br>E-pošta: <a href="mailto:{email}">{email}</a><br>Telefon: {phone}</p>'],
       ['2. Hosting', '<p>Ova stranica hostana je kod tvrtke Vercel Inc. Prilikom posjeta obrađuju se tehnički nužni zapisi poslužitelja (npr. IP adresa, vrijeme, otvorena stranica). Pravna osnova: čl. 6. st. 1. t. (f) GDPR-a. [Dopuniti podatke o ugovoru o obradi i prijenosu u treće zemlje.]</p>'],
-      ['3. Kontakt obrazac', '<p>Podatke unesene u obrazac obrađujemo radi odgovora na vaš upit i pripreme ugovora (čl. 6. st. 1. t. (b) GDPR-a). Poruke se šalju putem usluge e-pošte [pružatelj, npr. Resend]. [Dopuniti rokove čuvanja.]</p>'],
+      ['3. Kontakt obrazac', '<p>Podatke unesene u obrazac obrađujemo radi odgovora na vaš upit i pripreme ugovora (čl. 6. st. 1. t. (b) GDPR-a). Upiti se prenose putem usluge za obrasce Formspree (Formspree, Inc., SAD), koja nam ih prosljeđuje e-poštom. [Dopuniti podatke o ugovoru o obradi, prijenosu u treće zemlje i rokovima čuvanja.]</p>'],
       ['4. WhatsApp', '<p>Ako nas kontaktirate putem WhatsAppa, vaše podatke obrađuje WhatsApp Ireland Ltd. Molimo pogledajte pravila privatnosti WhatsAppa. Korištenje je dobrovoljno; možete nam pisati i e-poštom.</p>'],
       ['5. Kolačići i fontovi', '<p>Ne koristimo kolačiće za praćenje ni analitičke usluge. Fontovi se učitavaju lokalno s našeg poslužitelja.</p>'],
       ['6. Vaša prava', '<p>Imate pravo na pristup, ispravak, brisanje, ograničenje obrade, prenosivost podataka i prigovor te pravo na pritužbu nadzornom tijelu za zaštitu podataka.</p>'],

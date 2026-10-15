@@ -58,7 +58,6 @@
   const form = document.querySelector('[data-form]');
   if (!form) return;
   const V = T.v || {};
-  const ts = form.querySelector('[data-ts]'); if (ts) ts.value = String(Date.now());
   const status = form.querySelector('[data-status]');
   const summary = form.querySelector('[data-summary]');
   const btn = form.querySelector('[data-submit]');
@@ -102,14 +101,14 @@
       return;
     }
     summary.hidden = true;
-    const data = Object.fromEntries(new FormData(form).entries());
-    data.consent = form.elements.consent.checked;
+    const data = new FormData(form);
     setLoading(true);
     try {
-      const res = await fetch(form.action, { method: 'POST', headers: { 'Content-Type': 'application/json', Accept: 'application/json' }, body: JSON.stringify(data) });
+      // Formspree AJAX submission: https://help.formspree.io/hc/en-us/articles/360013470814
+      const res = await fetch(form.action, { method: 'POST', headers: { Accept: 'application/json' }, body: data });
       const json = await res.json().catch(() => ({}));
-      if (!res.ok || !json.ok) throw new Error(json.error || 'failed');
-      form.reset(); if (ts) ts.value = String(Date.now());
+      if (!res.ok || json.errors) throw new Error((json.errors || []).map((x) => x.message).join('; ') || 'failed');
+      form.reset();
       status.className = 'form-status ok'; status.textContent = T.success;
     } catch (err) {
       status.className = 'form-status fail'; status.textContent = T.error;
