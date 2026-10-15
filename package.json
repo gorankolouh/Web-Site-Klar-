@@ -4,7 +4,6 @@
   "private": true,
   "description": "Klarseite Studio – multilingual static website (DE/EN/HR) with a Vercel contact function",
   "scripts": {
-    "build": "node scripts/build.mjs"
-  },
-  "engines": { "node": ">=18" }
+    "generate": "node scripts/build.mjs"
+  }
 }
